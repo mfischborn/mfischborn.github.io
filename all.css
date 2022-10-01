@@ -1,13 +1,14 @@
 h1 {
-  font-size: 2.5em;
+  font-size: 2 rem;
+  padding: 2%;
 }
 
 h2 {
-  font-size: 8vw;
-  width: 95 vw;
+  font-size: 1.6rem;
+  padding: 2%;
 }
 
 p {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   padding: 2%;
 }
