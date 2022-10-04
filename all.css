@@ -4,18 +4,18 @@ html {
   color: #F8F8F8; 
 }
 h1 {
-  font-size: 2.6rem;
+  font-size: 2.7vw;
   padding-left: 2%;
   margin-bottom: 0.8em;
 }
 
 h2 {
-  font-size: 2.0rem;
+  font-size: 2.2vw;
   padding-left: 2%;
 }
 
 p {
-  font-size: 1.5rem;
+  font-size: 1.6vw;
   padding-left: 2%;
   margin-bottom: 0.4em;
 }
