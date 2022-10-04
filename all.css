@@ -1,11 +1,13 @@
 html {
   font-family: sans-serif;
 
+
 }
 h1 {
   font-size: 2rem;
   padding: 2%;
-  margin-bottom: -0.4em;
+  margin-bottom: -0.8em;
+  border: 1px solid red;
 }
 
 h2 {
@@ -17,4 +19,5 @@ h2 {
 p {
   font-size: 1.3rem;
   padding: 2%;
+  margin-bottom: -0.4em;
 }
