@@ -1,21 +1,21 @@
 html {
   font-family: sans-serif;
-  background-color: #121212;
+  background-color: #181818;
   color: #F8F8F8; 
 }
 h1 {
-  font-size: 2rem;
+  font-size: 2.6rem;
   padding-left: 2%;
   margin-bottom: 0.8em;
 }
 
 h2 {
-  font-size: 1.6rem;
+  font-size: 2.0rem;
   padding-left: 2%;
 }
 
 p {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   padding-left: 2%;
   margin-bottom: 0.4em;
 }
