@@ -3,7 +3,7 @@ html {
   background-color: #181818;
   color: #F8F8F8; 
   padding-top: 2%;
-  font-size: 16px;
+  font-size: calc(0.6vw + 0.6vh + 0.6vmin);
 }
 h1 {
   font-family: serif;
