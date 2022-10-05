@@ -2,8 +2,8 @@ html {
   font-family: sans-serif;
   background-color: #181818;
   color: #F8F8F8; 
-  padding: calc(3vw + 3vh);
-  font-size: calc(0.6vw + 0.6vh + 0.6vmin);
+  padding: calc(5vw + 5vh);
+  font-size: calc(0.9vw + 0.8vh);
 }
 h1 {
   font-family: serif;
