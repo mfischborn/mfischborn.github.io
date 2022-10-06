@@ -7,18 +7,64 @@ html {
   <!-- font-size: calc((0.25 * (2vw + 2vh)) + (0.8 * (1vmax - 1vmin))); -->
   <!-- font-size: calc((0.5vw + 0.5vh) + (0.5 * ((1vh - 1vw) * (1vh - 1vw))));   20vh - 7vh - 7vw -->
 }
+
+h1, h2, p, ul {
+  line-height: 135%;
+}
+
 h1 {
   font-family: serif;
-  font-size: 1.5em;
-  margin-bottom: calc(2.7vw + 2.7vh);
+  font-size: 1.7em;
+  margin-bottom: calc(2.5vw + 2.5vh);
 }
 
 h2 {
-  font-size: 1em;
-  margin-bottom: 0em;
+  font-size: 1.2em;
+  margin-top: 1.2em;
+  margin-bottom: 0.6em;
 }
 
 p {
   font-size: 1em;
-  margin-bottom: 0em;
+  
 }
+
+
+a {
+  text-decoration: none;
+}
+ /* unvisited link */
+a:link {
+  color: #A0A0FF;
+}
+
+/* visited link */
+a:visited {
+  color: #CCA0FF;
+}
+
+/* mouse over link */
+a:hover {
+  color: #7070FF;
+}
+
+/* selected link */
+a:active {
+  color: #5050FF;
+} 
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  padding-left: 1.7em;
+  text-indent: -1.7em;
+}
+li {
+  padding-bottom: 0.5em;
+}
+
+
+
+
