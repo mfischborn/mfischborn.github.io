@@ -22,7 +22,7 @@
     ul.task-list{list-style: none;}
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
-  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/moon.css" id="theme">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/white-contrast.css" id="theme">
 </head>
 <body>
   <div class="reveal">
@@ -37,7 +37,11 @@
 <section id="conteúdos" class="slide level2">
 <h2>Conteúdos</h2>
 <ol type="1">
+<li>Introdução</li>
 <li>Operações lógicas</li>
+<li>Sintaxe</li>
+<li>Semântica e tabelas de verdade</li>
+<li>Tautologia etc.</li>
 </ol>
 <!-- 
   An H1 or H2 renders as a large title in the middle of the slide.
@@ -46,17 +50,624 @@
 -->
 </section>
 <section>
-<section id="elementos-binários" class="title-slide slide level1">
-<h1>1. Elementos binários</h1>
+<section id="introdução" class="title-slide slide level1">
+<h1>1. Introdução</h1>
 
 </section>
-<section id="começando" class="slide level2">
-<h2>Começando</h2>
+<section id="lógica" class="slide level2">
+<h2>Lógica</h2>
+<div>
+<ul>
+<li class="fragment">Filosofia, Matemática, Computação…</li>
+<li class="fragment">Argumentação, Provas, Circuitos/Algoritmos…</li>
+<li class="fragment">Aristóteles, Boole, Turing…</li>
+</ul>
+</div>
+</section>
+<section id="variáveis-binárias" class="slide level2">
+<h2>Variáveis binárias</h2>
+<div>
+<ul>
+<li class="fragment">Proposições {V, F}. Ex: O quadro é branco.</li>
+<li class="fragment">Bits {0, 1}, {desligado, ligado}, {0v, 5v}, {não,
+sim}.</li>
+</ul>
+</div>
+</section>
+<section id="lógica-proposicional" class="slide level2">
+<h2>Lógica proposicional</h2>
+<div>
+<ul>
+<li class="fragment">Analisa argumentos tendo as <strong>proposições
+como unidades básicas</strong>.</li>
+<li class="fragment">Considera as <strong>operações lógicas</strong>
+aplicadas a proposições.</li>
+<li class="fragment">Relação próxima com a <strong>Álgebra de
+Boole</strong>.</li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="operações-lógicas" class="title-slide slide level1">
+<h1>2. Operações lógicas</h1>
+
+</section>
+<section id="negação" class="slide level2">
+<h2>1. Negação (¬)</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">( A )</th>
+<th style="text-align: center;">( ¬ A )</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>A</strong>: Está chovendo.</li>
+<li><strong>¬A</strong>: Não está chovendo.</li>
+<li>Inverte o valor da variável negada.</li>
+</ul>
+</section>
+<section id="conjunção" class="slide level2">
+<h2>2. Conjunção (∧)</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">( A )</th>
+<th style="text-align: center;">( B )</th>
+<th style="text-align: center;">( A ∧ B )</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+</tr>
+</tbody>
+</table>
+<div>
+<ul>
+<li class="fragment"><strong>A</strong>: Está chovendo;
+<strong>B</strong>: Está frio.</li>
+<li class="fragment"><strong>A ∧ B</strong>: Está chovendo e está
+frio.</li>
+<li class="fragment"><strong>V</strong> apenas quando ambos os
+conjuntivos são verdadeiros.</li>
+</ul>
+</div>
+</section>
+<section id="disjunção-inclusiva" class="slide level2">
+<h2>3. Disjunção Inclusiva (∨)</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">( A )</th>
+<th style="text-align: center;">( B )</th>
+<th style="text-align: center;">( A ∨ B )</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+</tr>
+</tbody>
+</table>
+<div>
+<ul>
+<li class="fragment"><strong>A</strong>: Está chovendo.
+<strong>B</strong>: Está frio.</li>
+<li class="fragment"><strong>A ∨ B</strong>: Está chovendo ou está frio
+(ou ambos).</li>
+<li class="fragment"><strong>F</strong> apenas quando ambos os
+disjuntivos são falsos.</li>
+</ul>
+</div>
+</section>
+<section id="disjunção-exclusiva" class="slide level2">
+<h2>4. Disjunção Exclusiva (⊻)</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">( A )</th>
+<th style="text-align: center;">( B )</th>
+<th style="text-align: center;">( A ⊻ B )</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+</tr>
+</tbody>
+</table>
+<div>
+<ul>
+<li class="fragment"><strong>A</strong>: Está chovendo.
+<strong>B</strong>: Está frio.</li>
+<li class="fragment"><strong>A ⊻ B</strong>: Está chovendo ou está frio
+(mas não ambos).</li>
+<li class="fragment"><strong>V</strong> quando os disjuntivos têm
+valores diferentes.</li>
+</ul>
+</div>
+</section>
+<section id="condicional" class="slide level2">
+<h2>5. Condicional (⇒)</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">( A )</th>
+<th style="text-align: center;">( B )</th>
+<th style="text-align: center;">( A ⇒ B )</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+</tr>
+</tbody>
+</table>
+<div>
+<ul>
+<li class="fragment"><strong>A</strong>: Está chovendo.
+<strong>B</strong>: Está frio.</li>
+<li class="fragment"><strong>A ⇒ B</strong>: Se está chovendo, então
+está frio.</li>
+<li class="fragment"><strong>F</strong> apenas se o antecedente é
+<strong>V</strong> e o consequente é <strong>F</strong>.</li>
+</ul>
+</div>
+</section>
+<section id="bicondicional" class="slide level2">
+<h2>6. Bicondicional (⇔)</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">( A )</th>
+<th style="text-align: center;">( B )</th>
+<th style="text-align: center;">( A ⇔ B )</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+</tr>
+</tbody>
+</table>
+<div>
+<ul>
+<li class="fragment"><strong>A</strong>: Está chovendo.
+<strong>B</strong>: Está frio.</li>
+<li class="fragment"><strong>A ⇔ B</strong>: Está chovendo se, e somente
+se, está frio.</li>
+<li class="fragment"><strong>V</strong> apenas quando ambas as
+proposições têm o mesmo valor.</li>
+</ul>
+</div>
+</section>
+<section id="seta-de-peirce" class="slide level2">
+<h2>7*. Seta de Peirce (↓)</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">( A )</th>
+<th style="text-align: center;">( B )</th>
+<th style="text-align: center;">( A ↓ B )</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>A: Está chovendo. B: Está frio.</li>
+<li>A ↓ B: Não está chovendo nem está frio.</li>
+</ul>
+</section>
+<section id="barra-de-scheffer-nand-não-e" class="slide level2">
+<h2>8*. Barra de Scheffer, NAND, Não-E (|)</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">( A )</th>
+<th style="text-align: center;">( B )</th>
+<th style="text-align: center;">( A</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>A: Está chovendo.</li>
+<li>B: Está frio.</li>
+<li>A | B: É falso que (está chovendo e está frio).</li>
+</ul>
+</section>
+<section class="slide level2">
+
+</section></section>
+<section>
+<section id="sintaxe" class="title-slide slide level1">
+<h1>3. Sintaxe</h1>
+
+</section>
+<section id="o-que-é-sintaxe" class="slide level2">
+<h2>O que é sintaxe?</h2>
+<ul>
+<li>Estudo de regras para construção de expressões em uma
+linguagem.</li>
+</ul>
+</section>
+<section id="falhas-sintáticas" class="slide level2">
+<h2>Falhas Sintáticas</h2>
+<div>
+<ul>
+<li class="fragment">Eu sabo.</li>
+<li class="fragment">Eles foi.</li>
+<li class="fragment">O ao está quadro da lado mesa.</li>
+</ul>
+</div>
+</section>
+<section id="sintaxe-da-lógica-proposicional" class="slide level2">
+<h2>Sintaxe da Lógica Proposicional</h2>
+<ol type="1">
+<li>As variáveis proposicionais (A, B, C …, A1, A2, A3…) são fórmulas
+bem construídas.</li>
+<li>Se α e β são fórmulas bem construídas, então (~α), (α ^ β), (α v β),
+(α ⊻ β), (α ⇒ β), (α ⇔ β), também são fórmulas bem construídas.</li>
+<li>Apenas as fórmulas que seguem 1. ou 2. são bem construídas.</li>
+</ol>
+</section>
+<section id="exemplos-1" class="slide level2">
+<h2>Exemplos (1)</h2>
+<div>
+<ul>
+<li class="fragment">α: C</li>
+<li class="fragment">β: A</li>
+<li class="fragment">(α ⇒ β): (C ⇒ A)</li>
+</ul>
+</div>
+</section>
+<section id="exemplos-2" class="slide level2">
+<h2>Exemplos (2)</h2>
+<div>
+<ul>
+<li class="fragment">α: A</li>
+<li class="fragment">β: (C ⇒ A)</li>
+<li class="fragment">(α ^ β): (A ^ (C ⇒ A))</li>
+</ul>
+</div>
+</section>
+<section id="exemplos-3" class="slide level2">
+<h2>Exemplos (3)</h2>
+<div>
+<ul>
+<li class="fragment">α: (A ^ (C ⇒ A))</li>
+<li class="fragment">β: (C ⇒ A)</li>
+<li class="fragment">(α v β): ((A ^ (C ⇒ A)) ^ (C ⇒ A))</li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="semântica" class="title-slide slide level1">
+<h1>4. Semântica</h1>
+
+</section>
+<section id="o-que-é-semântica" class="slide level2">
+<h2>O que é semântica?</h2>
+<div>
+<ul>
+<li class="fragment">Estuda o significado das expressões da
+linguagem.</li>
+<li class="fragment">Exemplos: referência, sentido, valor de verdade (V
+ou F).</li>
+</ul>
+</div>
+</section>
+<section id="semântica-da-lógica-proposicional-1" class="slide level2">
+<h2>Semântica da Lógica Proposicional (1)</h2>
 <blockquote>
-<p>O <strong>pensamento</strong> influencia nossa
-<strong>vida</strong>.</p>
+<p>“A toda atribuição de valores de verdade V ou F às letras
+proposicionais que ocorrem em uma fórmula, corresponde, em virtude das
+tabelas de valores de verdade dos operadores proposicionais, um valor de
+verdade para a fórmula proposicional” (Mendelson, p. 13).</p>
 </blockquote>
-<p>Texto: O que pensamos importa.</p>
+</section>
+<section id="semântica-da-lógica-proposicional-2" class="slide level2">
+<h2>Semântica da Lógica Proposicional (2)</h2>
+<blockquote>
+<p>A atribuição de valores de verdade às variáveis proposicionais é
+chamada de <strong>valoração</strong>. É uma forma de
+<strong>interpretação</strong>.</p>
+</blockquote>
+</section>
+<section id="exemplo-1" class="slide level2">
+<h2>Exemplo (1)</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">( A )</th>
+<th style="text-align: center;">( C )</th>
+<th style="text-align: center;">( C ⇒ A )</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="exemplo-2" class="slide level2">
+<h2>Exemplo (2)</h2>
+<table>
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 10%" />
+<col style="width: 32%" />
+<col style="width: 44%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">A</th>
+<th style="text-align: center;">C</th>
+<th style="text-align: center;">( C ⇒ A )</th>
+<th style="text-align: center;">( A ^ (C ⇒ A) )</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="construindo-tabelas" class="slide level2">
+<h2>Construindo Tabelas</h2>
+<div>
+<ol type="1">
+<li class="fragment">O número de linhas é dado por 2 elevado a N
+(N=número de variáveis/letras).</li>
+<li class="fragment">Criar uma coluna para cada letra, à esquerda.</li>
+<li class="fragment">Listar todas as combinções de valores para as
+letras da tabela.</li>
+<li class="fragment">Adicionar os fragmentos da fórmula à tabela,
+começando pelos parênteses mais internos.</li>
+</ol>
+</div>
+</section>
+<section id="exemplo-3" class="slide level2">
+<h2>Exemplo (3)</h2>
+<figure>
+<img
+data-src="https://www.centralexatas.com.br/img/matematica/raciocinio-logico/tabela-verdade-para-3-proposicoes-simples.png"
+alt="Imagem de centralexatas.com.br" />
+<figcaption aria-hidden="true">Imagem de
+centralexatas.com.br</figcaption>
+</figure>
+</section></section>
+<section>
+<section id="tautologias-etc." class="title-slide slide level1">
+<h1>5. Tautologias etc.</h1>
+
+</section>
+<section id="conceitos-iniciais" class="slide level2">
+<h2>Conceitos iniciais</h2>
+<div>
+<ul>
+<li class="fragment">Tautologia: verdade lógica (fórmula cuja coluna é
+verdadeira em todas as linhas).</li>
+<li class="fragment">Contradição: falsidade lógica (fórmula cuja coluna
+é falsa em todas as linhas).</li>
+<li class="fragment">Contingência: não é verdade nem falsidade lógica
+(há uma ou mais linhas verdadeiras e uma ou mais linhas falsas).</li>
+</ul>
+</div>
+</section>
+<section id="exemplo" class="slide level2">
+<h2>Exemplo</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">( A )</th>
+<th style="text-align: center;">( ~ A )</th>
+<th style="text-align: center;">( A v ( ~ A ) )</th>
+<th style="text-align: center;">( A ^ (  (~ A )</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="referências" class="slide level2">
+<h2>Referências</h2>
+<ul>
+<li>Mendelson, E. (1997) Introduction to mathematical logic.</li>
+<li>Algumas partes do material foram elaboradas usando o ChatGPT e
+depois ajustadas.</li>
+</ul>
 </section></section>
     </div>
   </div>
