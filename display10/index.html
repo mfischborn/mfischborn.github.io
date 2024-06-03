@@ -1,0 +1,259 @@
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Dispay Aniversário do Campus</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="./dist/reveal.css">
+		<link rel="stylesheet" href="./dist/theme/black.css" id="theme">
+		<link rel="stylesheet" href="./plugin/highlight/monokai.css">
+		
+		<style>
+		.marcadagua {
+		    font-family: Source Sans Pro, Helvetica, sans-serif;
+            font-size: 4vw;
+           /* opacity : 0.5;*/
+            font-weight: bold;
+            color: white;
+            margin : 2vw;
+            text-align : center;
+             position :  absolute;
+             width :  100%;
+            bottom :  0;
+             display :  none;
+             background-color: rgba(0,0,0,0.5);
+             
+             padding : 0.9vw;
+                
+          }
+		        
+		</style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<div class="slides" >
+			
+			    
+			
+			
+				<section data-auto-animate data-auto-animate-unmatched="fade"  data-autoslide="1000" data-background-color="rgb(50, 162, 65)" data-background-image="./assets/bg1-iffar.jpg">
+					<h1 style="color:white; font-size:18vw;margin:0px" class="fragment" data-autoslide="1000"  >10 ANOS</h1>
+                    <h2 style="color:white" class="fragment" >CAMPUS URUGUAIANA</h2>
+                    <h1 style="color:white" class="fragment" >PARABÉNS</h1>
+                 <h1 style="color:white" class="fragment" data-autoslide="10000"></h1>
+				</section>
+
+                <section data-auto-animate  data-autoslide="10000" data-auto-animate-unmatched="fade"  data-background-color="rgb(50, 162, 65)" data-background-image="./assets/bg2-iffar.jpg">
+                    <h1 id="demoCountDownTitle" style="color:white; font-size:18vw;margin:0px"   >FALTAM</h1>
+                    <div id="demoCountDown" style="color:white; font-size:5vw">
+                     </div>
+				</section>
+
+         
+		
+				<section data-auto-animate data-auto-animate-unmatched="fade"  data-autoslide="1000" data-background-color="rgb(50, 162, 65)" data-background-image="./assets/bg1-iffar.jpg">
+					<h1 style="color:white; font-size:6vw; margin:0px" data-autoslide="1000"   class="fragment">INSTITUTO FEDERAL FARROUPILHA</h1>
+                    <p style="color:white; font-size:6vw"   class="fragment">desde 2014</p>
+                    <p style="color:white; font-size:6vw"   class="fragment">EM URUGUAIANA</p>
+                    <h1 style="color:white" class="fragment" data-autoslide="10000"></h1>
+				</section>
+				
+				<section data-auto-animate data-auto-animate-unmatched="fade" data-autoslide="1000"  data-background-color="rgb(50, 162, 65)" data-background-image="./assets/bg2-iffar.jpg">
+					<h1 style="color:white; font-size:6vw; margin:0px" class="fragment">CURSOS TÉCNICOS</h1>
+                    <p style="color:white; font-size:3vw" class="fragment">Administração (Integrado)</p>
+                    <p style="color:white; font-size:3vw" class="fragment">Informática (Integrado)</p>
+                    <p style="color:white; font-size:3vw" class="fragment">Manutenção e Suporte em Informática (Subsequente)</p>
+                    <p style="color:white; font-size:3vw" class="fragment">Marketing (Subsequente)</p>
+                    <h1 style="color:white" class="fragment" data-autoslide="10000"></h1>
+				</section>
+				
+
+				<section data-auto-animate data-auto-animate-unmatched="fade"  data-autoslide="1000" data-background-color="rgb(50, 162, 65)" data-background-image="./assets/bg1-iffar.jpg">
+					<h1 style="color:white; font-size:6vw; margin:0px" class="fragment">CURSOS SUPERIORES</h1>
+                    <p style="color:white; font-size:3vw" class="fragment">Administração (2025)</p>
+                    <p style="color:white; font-size:3vw" class="fragment">Análise e Desenvolvimento de Sistemas (2025)</p>
+                    <p style="color:white; font-size:3vw" class="fragment">Licenciatura em Matemática</p>
+                    <h1 style="color:white" class="fragment" data-autoslide="10000"></h1>
+				</section>
+			
+
+		</div>
+
+		<script src="./dist/reveal.js"></script>
+		<script src="./plugin/highlight/highlight.js"></script>
+		<script>
+		
+		
+		  
+        // Obter a URL atual
+        var url = new URL(window.location.href);
+        // Obter parâmetros de consulta
+        var params = new URLSearchParams(url.search);
+        // Obter o valor do parâmetro "idfoto"
+        var idfoto = params.get('idfoto');
+        
+        if (!(idfoto)) { 
+            idfoto = 0;
+           }
+
+     
+
+        var arr = [];
+        var indFotoAtual = idfoto;
+        var totFotosPorBloco = 5;
+        var totGeralDeFotos = 5; //30  5 para demonstração
+
+        for (var i = 0; i < totGeralDeFotos; i++) {
+            arr.push('assets/fotos/' + i +".jpg");
+        }
+        
+        
+         // Function to add a new slide
+        function addSlide() {
+        /*
+             // Seleciona todos os elementos com a classe 'to-remove'
+            var elements = document.querySelectorAll('.foto');
+
+            elements.forEach(function(element) {
+                // Obtém o elemento pai
+                var parent = element.parentElement;
+
+                // Remove o elemento pai
+                if (parent) {
+                    parent.removeChild(element);
+                }
+            });
+           */
+           for (var a = 0; a < totFotosPorBloco; a++) {
+
+                var newSection = document.createElement('section');
+                newSection.classList.add('foto');
+                newSection.innerHTML = "";
+                newSection.style.block = 'none';
+                
+                newSection.setAttribute("data-background-image", arr[indFotoAtual]);
+                
+                newSection.setAttribute("data-background-color", "rgb(50, 162, 65)"); //alterado
+                newSection.setAttribute("data-auto-animate-unmatched", "fade");
+                newSection.setAttribute("data-autoslide", "5000");
+                
+                
+          
+                
+                document.querySelector('.slides').appendChild(newSection);
+
+                indFotoAtual++;
+                if (indFotoAtual >= arr.length){
+                    indFotoAtual = 0;
+                }
+            }
+  
+        }
+        
+    
+        function iniciaReveal(){
+ 
+                 Reveal.initialize({
+                    loop: false,   
+                    autoSlide : 1000 
+                });
+                
+                 
+              Reveal.addEventListener('slidechanged', function(event) {
+                     console.log(event.indexh  + " == " +  (Reveal.getTotalSlides() - 1 ));
+                     
+                     if (event.indexh == (Reveal.getTotalSlides() - totFotosPorBloco ) ){
+                     
+                          var eMD  =  document.getElementById("marcadagua");
+                          
+                          eMD.style.display = 'block';
+                           
+                     }
+                     
+                     
+                    if (event.indexh == (Reveal.getTotalSlides() - 1 ) ){
+                    
+                        setTimeout( function (){
+                                var currentUrl = window.location.href;
+
+                                // Verifica se a URL já possui parâmetros de consulta
+                                var index = currentUrl.indexOf('?');
+                                var baseUrl = index !== -1 ? currentUrl.slice(0, index) : currentUrl
+
+                                // Constrói a nova URL com apenas o novo parâmetro de consulta
+                                var newUrl = baseUrl + '?idfoto=' +  indFotoAtual;
+
+                                // Redireciona para a nova URL
+                                window.location.href = newUrl;
+                           } , 5000);
+                    }
+                });
+        
+        }
+        
+          addSlide();
+          
+             setTimeout( function () {
+                             iniciaReveal();
+                        }, 1000);
+
+
+////////////////////////////////////////////////////////////
+               // Set the date we're counting down to
+    var countDownDate = new Date("Jun 10, 2024 08:00:00").getTime();
+    
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+    
+      // Get today's date and time
+      var now = new Date().getTime();
+    
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+    
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+      // Display the result in the element with id="demo"
+      document.getElementById("demoCountDownTitle").innerHTML = "FALTAM";
+      document.getElementById("demoCountDown").innerHTML = days + " dias " + hours + " horas "  + minutes + "m " + seconds + "s ";
+    
+      // If the count down is finished, write some text
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demoCountDownTitle").innerHTML = "É HOJE";
+        document.getElementById("demoCountDown").innerHTML = "PARABÉNS CAMPUS URUGUAIANA!";
+      }
+    }, 1000);
+
+
+
+
+      
+            // Cria um container (div) para o texto
+                var textContainer = document.createElement('div');
+                 textContainer.id = "marcadagua";
+          
+              
+          
+                
+                textContainer.classList.add('marcadagua');
+            
+            
+                textContainer.innerText = 'PARABÉNS PELOS DEZ ANOS DE HISTÓRIA';
+                
+                document.body.appendChild(textContainer);
+                
+		</script>
+
+
+
+	</body>
+</html>
