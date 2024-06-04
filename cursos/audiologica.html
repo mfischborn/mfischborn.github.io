@@ -1,0 +1,114 @@
+<!-- XhKnUNPp -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LÓGICA ACESSÍVEL</title>
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=XhKnUNPp"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 2.6vh;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 800px;
+            width: 100%;
+            padding: 4vh;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 2vh;
+            max-height: 90vh; 
+            overflow-y: auto;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 3vh;
+            font-size: 24px;
+        }
+        p.tts {
+            padding: 3vh; /*15px;*/
+            margin-bottom: 3vh; /*15px;*/
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        p.tts:hover {
+            background-color: #f1f1f1;
+        }
+        p.tts.h1 {
+            font-weight: bold; /* Make the text bold for elements with both tts and bold classes */
+            font-size: 1.2em;
+        }
+        p.tts.h2 {
+            font-weight: bold; /* Make the text bold for elements with both tts and bold classes */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">     
+        <p class="tts h1">DISCIPLINA: LÓGICA MATEMÁTICA</p>
+        <p class="tts">PROFESSOR: MARCELO FISCHBORN</p>
+        <p class="tts h1">TEMA 1: OPERAÇÕES LÓGICAS BÁSICAS</p>
+        <p class="tts h2">OPERAÇÃO 1: E (CONJUNÇÃO)</p>
+        <p class="tts">EXEMPLOS:</p>
+        <p class="tts">O QUADRO É BRANCO <strong>E</strong> A LUZ ESTÁ ACESA.</p>
+        <p class="tts">É NOITE <strong>E</strong> CHOVEU.</p>
+        <p class="tts">2+2=4 <strong>E</strong> 1+2=3.</p>
+        <p class="tts">EXPLICAÇÃO:</p>
+        <p class="tts">AS FRASES ACIMA SÓ SÃO VERDADEIRAS QUANDO SUAS DUAS PARTES SÃO VERDADEIRAS.</p>
+        <p class="tts">O QUADRO É BRANCO <strong>E</strong> A LUZ ESTÁ ACESA.</p>
+        <p class="tts">É VERDADE QUE O QUADRO É BRANCO <strong>E</strong> É VERDADE QUE A LUZ ESTÁ ACESA.</p>
+        
+        
+        <p class="tts h2">OPERAÇÃO 1: OU (DISJUNÇÃO INCLUSIVA)</p>
+        <p class="tts">EXEMPLOS:</p>
+        <p class="tts">O QUADRO É BRANCO <strong>OU</strong> A LUZ ESTÁ ACESA.</p>
+        <p class="tts">É NOITE <strong>OU</strong> CHOVEU.</p>
+        <p class="tts">2+2=4 <strong>OU</strong> 1+2=3.</p>
+        <p class="tts">EXPLICAÇÃO:</p>
+        <p class="tts">AS FRASES ACIMA SÃO VERDADEIRAS QUANDO PELO MENOS UMA DAS PARTES É VERDADEIRA.</p>
+        <p class="tts">O QUADRO É BRANCO <strong>OU</strong> A LUZ ESTÁ ACESA.</p>
+        <p class="tts">É VERDADE QUE O QUADRO É BRANCO <strong>OU</strong> É VERDADE QUE A LUZ ESTÁ ACESA.</p>
+        
+        
+        <p class="tts h2">OPERAÇÃO 1: NÃO (NEGAÇÃO)</p>
+        <p class="tts">EXEMPLOS:</p>
+        <p class="tts">O QUADRO NÃO É BRANCO.</p>
+        <p class="tts">NÃO ESTÁ CHOVENDO.</p>
+        <p class="tts">NÃO É VERDADE QUE 2+2=5.</p>
+        <p class="tts">EXPLICAÇÃO:</p>
+        <p class="tts">AS FRASES ACIMA SÃO VERDADEIRAS QUANDO A CONDIÇÃO ESPECIFICADA NÃO É VERDADEIRA.</p>
+        <p class="tts">O QUADRO NÃO É BRANCO.</p>
+        <p class="tts">É VERDADE QUE O QUADRO NÃO É BRANCO.</p>
+        
+    </div>
+    
+    <script>
+        function speak(text) {
+            responsiveVoice.speak(text, "Brazilian Portuguese Female");
+        }
+
+        function setTextToSpeech() {
+            const paragraphs = document.querySelectorAll('p.tts');
+            paragraphs.forEach(p => {
+                p.onclick = () => speak(p.innerText);
+            });
+        }
+
+        // Initialize text-to-speech functionality
+        window.onload = setTextToSpeech;
+    </script>
+</body>
+</html>
+
