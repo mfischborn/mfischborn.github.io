@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LÓGICA ACESSÍVEL</title>
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=XhKnUNPp"></script>
+    <link rel="stylesheet" href="./include/lit.css">
+    <script type="text/javascript" src="./include/code.js"></script> 
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700" rel="stylesheet">
+    <!--<script async defer src="https://buttons.github.io/buttons.js"></script>-->
+</head>
+<body class="c">
+
+
+    <h1 class="tts">ÁUDIOLÓGICO</h2>
+    <div class="tts">CURSO DE LÓGICA</div>
+        
+    <hr><h2 class="tts">NEGAÇÃO: NÃO</h2>
+
+<h3 class="tts">EXEMPLOS</h3>
+<ul>
+    <li class="tts">O QUADRO <strong>NÃO</strong> É BRANCO.</li>
+    <li class="tts"><strong>NÃO</strong> ESTÁ CHOVENDO.</li>
+    <li class="tts"><strong>É FALSO QUE</strong> 2+2=5.</li>
+</ul>
+
+
+
+<h3 class="tts">EXPLICAÇÃO</h3>
+
+<ul>
+
+
+</ul>
+    <li class="tts">A <strong>NEGAÇÃO</strong> INVERTE O SENTIDO DAS FRASES.</li>
+    <li class="tts">SE "O QUADRO É BRANCO" É VERDADEIRA, ENTÃO "O QUADRO <strong>NÃO</strong> É BRANCO" É FALSA.</li>
+    <li class="tts">SE "2+2=5" É FALSA, ENTÃO "<strong>É FALSO</strong> QUE 2+2=5" É VERDADEIRA.</li>
+
+<hr>
+
+<div class="c"> <!-- Início da questão -->
+
+    <p class="tts"><strong>QUESTÃO 1.</strong> MARQUE A ALTERNATIVA QUE CONTÉM UMA NEGAÇÃO.</p>
+
+    <table class="w-100">
+        <tbody>
+            <tr>
+                <td><button class="btn" onclick="checkAnswer(false, this)">A</button></td>
+                <td class="tts">HOJE FEZ SOL.</td>
+            </tr>
+            <tr>
+                <td><button class="btn" onclick="checkAnswer(false, this)">B</button></td>
+                <td class="tts">AMANHÃ CHOVERÁ.</td>
+            </tr>
+            <tr>
+                <td><button class="btn" onclick="checkAnswer(true, this)">C</button></td>
+                <td class="tts">HOJE NÃO CHOVEU.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    
+    <div class="feedback"></div>
+
+</div> <!-- Fim da questão -->
+
+<div class="c">
+    <div class="points" id="points">Pontos: 0</div>
+</div><div class="c">
+    <a class=btn href="0.html">0</a>
+    <a class=btn href="1.html">1</a>
+    <a class=btn href="2.html">2</a>
+    <a class=btn href="3.html">3</a>
+    <a class="btn" id="dynamicLink" href="#">PRÓXIMA</a>
+</div>
+<script>
+    //document.getElementById('dynamicLink').href = window.location.pathname.replace(/[^\/]*$/, '') + (parseInt(window.location.pathname.match(/(\d+)(?=\.html$)/)[0]) + 1) + '.html';
+</script>
+
+<hr>
+<p class="tts">ÁudioLógica | por Marcelo Fischborn | 2024 </p>
+</body>
+</html>
