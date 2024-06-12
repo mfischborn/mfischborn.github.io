@@ -32,4 +32,6 @@ function checkAnswer(isCorrect, currentElement) {
     
 }
 
+// Initialize text-to-speech functionality
+window.onload = setTextToSpeech;
 
