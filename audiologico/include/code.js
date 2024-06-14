@@ -35,3 +35,37 @@ function checkAnswer(isCorrect, currentElement) {
 // Initialize text-to-speech functionality
 window.onload = setTextToSpeech;
 
+function linksNextPrevious(){
+    const linkNext = document.getElementById('linkNext');
+    const linkPrevious = document.getElementById('linkPrevious');
+
+    // Obter o caminho da URL atual
+    const path = window.location.pathname;
+    // Extrair o nome do arquivo da URL
+    //console.log("teste: ", path);
+    const fileName = path.substring(path.lastIndexOf('/') + 1);
+    //console.log("fileName: ", fileName);
+
+    // Extrair o número do nome do arquivo
+    if(fileName == "index.html"){
+        linkNext.href = "2.html";
+    } else {
+
+        const currentNumber = parseInt(fileName.match(/(\d+)(?=\.html$)/)[0]);
+        //console.log("currentNumber: ", currentNumber);
+        
+        // Criar o novo nome de arquivo
+        const nextFileName = fileName.replace(currentNumber, currentNumber+1);
+        const previousFileName = fileName.replace(currentNumber, currentNumber-1);
+
+        if(currentNumber > 0) {  linkPrevious.href = previousFileName;  }
+        //console.log("currentNumber: ", currentNumber);
+
+        linkNext.href = nextFileName; 
+        //console.log("nextFileName: ", nextFileName);
+        //console.log("previousFileName: ", previousFileName);
+    }
+
+}
+
+//window.onload = linksNextPrevious();
