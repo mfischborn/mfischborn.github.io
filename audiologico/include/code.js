@@ -47,7 +47,7 @@ function linksNextPrevious(){
     console.log("fileName: ", fileName);
 
     // Extrair o número do nome do arquivo
-    if(fileName == "index.html"){
+    if(!fileName || fileName == "index.html"){
         linkNext.href = "2.html";
     } else {
 
