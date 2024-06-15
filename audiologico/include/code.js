@@ -44,7 +44,7 @@ function linksNextPrevious(){
     // Extrair o nome do arquivo da URL
     //console.log("teste: ", path);
     const fileName = path.substring(path.lastIndexOf('/') + 1);
-    console.log("fileName: ", fileName);
+    //console.log("fileName: ", fileName);
 
     // Extrair o número do nome do arquivo
     if(!fileName || fileName == "index.html"){
