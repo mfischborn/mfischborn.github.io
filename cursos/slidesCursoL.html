@@ -676,6 +676,242 @@ verdadeira em todas as linhas).</li>
 </tbody>
 </table>
 </section>
+<section id="equivalência-lógica" class="slide level2">
+<h2>Equivalência lógica</h2>
+<ul>
+<li>Equivalência lógica: α e β são logicamente equivalentes se, e
+somente se, α e β têm os mesmos valores de verdade para qualquer
+atribuição de valores de verdade às variáveis proposicionais de α e
+β.</li>
+<li>Na equivalência lógica, (α ⇔ β) é uma tautologia.</li>
+</ul>
+</section>
+<section id="exemplo-4" class="slide level2">
+<h2>Exemplo</h2>
+<table>
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 5%" />
+<col style="width: 8%" />
+<col style="width: 15%" />
+<col style="width: 17%" />
+<col style="width: 16%" />
+<col style="width: 30%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">A</th>
+<th style="text-align: center;">B</th>
+<th style="text-align: center;">~B</th>
+<th style="text-align: center;">A ⇒ B</th>
+<th style="text-align: center;">A ^ (~B))</th>
+<th style="text-align: center;">~(A ⇒ B))</th>
+<th style="text-align: center;">α ⇔ β</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">α</td>
+<td style="text-align: center;">β</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="consequência-lógica" class="slide level2">
+<h2>Consequência lógica</h2>
+<ul>
+<li>Consequência lógica: α implica logicamente β (β é consequência
+lógica de α) se, e somente se, qualquer atribuição de valores de verdade
+às variáveis proposicionais de α e β que torna α verdadeira também torna
+β verdadeira.</li>
+<li>Na consequência lógica, (α ⇒ β) é uma tautologia.</li>
+</ul>
+</section></section>
+<section>
+<section id="validade-de-argumentos" class="title-slide slide level1">
+<h1>6. Validade de argumentos</h1>
+
+</section>
+<section id="conceito-de-validade" class="slide level2">
+<h2>Conceito de validade</h2>
+<ul>
+<li>Um argumento é um conjunto de proposições em que algumas (premissas)
+pretendem justificar outra (conclusão).</li>
+<li>Um argumento é válido se é impossível que a conclusão seja falsa
+<strong>se</strong> suas premissas forem todas verdadeiras.</li>
+<li>Supondo que α1, α2, α3 … αn sejam premissas de um argumento e que β
+seja a conclusão, esse argumento é válido se, e somente se, ((α1 ^ α2 ^
+α3 ^ αn) ⇒ β) é uma tautologia.</li>
+</ul>
+</section>
+<section id="teste-de-validade" class="slide level2">
+<h2>Teste de validade</h2>
+<ol type="1">
+<li>Criar uma tabela que contenha uma coluna para cada premissa e para a
+conclusão do argumento.</li>
+<li>Verificar se existe alguma linha em que todas as premissas são
+verdadeiras e a conclusão é falsa.
+<ul>
+<li>Se existe, então o argumento é inválido.</li>
+<li>Se não existe, então o argumento é válido.</li>
+</ul></li>
+</ol>
+</section>
+<section id="exemplo-parte-1" class="slide level2">
+<h2>Exemplo (parte 1)</h2>
+<table>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>P1: Se o computador está conectado à internet, então está
+ligado.<br> P2: O computador não está conectado à internet.</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>C: O computador não está ligado.</strong></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="exemplo-parte-2" class="slide level2">
+<h2>Exemplo (parte 2)</h2>
+<table>
+<thead>
+<tr class="header">
+<th>P1: (A ⇒ B).<br>P2: (~A).</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>C: (~B).</strong></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="exemplo-parte-3" class="slide level2">
+<h2>Exemplo (parte 3)</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">A</th>
+<th style="text-align: center;">B</th>
+<th style="text-align: center;">A ⇒ B</th>
+<th style="text-align: center;">~A</th>
+<th style="text-align: center;">~B</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">P1</td>
+<td style="text-align: center;">P2</td>
+<td style="text-align: center;">C</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="exemplo-parte-4" class="slide level2">
+<h2>Exemplo (parte 4)</h2>
+<ul>
+<li>O argumento é <strong>inválido</strong> porque existe uma linha
+(linha 3) em que as premissas são todas verdadeiras e a conclusão é
+falsa.</li>
+<li>Isso mostra que é logicamente possível que as premissas sejam todas
+verdadeiras e a conclusão falsa.</li>
+</ul>
+</section>
+<section id="exercícios" class="slide level2">
+<h2>Exercícios</h2>
+<p>Testar a validade dos seguintes argumentos:</p>
+<ol type="1">
+<li>A ⇒ B; A :. B</li>
+<li>A v B; ~A :. B</li>
+<li>A ^ (~A) :. A v B</li>
+<li>A; ~B :. A ⇒ B</li>
+</ol>
+</section>
+<section id="exercícios-respostas" class="slide level2">
+<h2>Exercícios (respostas)</h2>
+<ol type="1">
+<li>A ⇒ B; A :. B (válido)</li>
+<li>A v B; ~A :. B (válido)</li>
+<li>A ^ (~A) :. A v B (válido)</li>
+<li>A; ~B :. A ⇒ B (inválido)</li>
+</ol>
+</section>
 <section id="referências" class="slide level2">
 <h2>Referências</h2>
 <ul>
